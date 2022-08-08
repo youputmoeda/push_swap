@@ -6,31 +6,46 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 18:29:09 by joteixei          #+#    #+#             */
-/*   Updated: 2022/07/27 22:05:43 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/08 18:09:51 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
-t_stack	*create_frame(t_stack *frame, char **argv)
+void swap(t_list **list)
 {
-	frame = (t_stack *)malloc(sizeof(t_stack));
-	if (!(frame))
-		exit(1);
-	frame->array = argv;
-	return (frame);
+	t_list *new;
+
+	if (!list || (*list) || !(*list)->next)
+		return ;
+	new = (*list)->next;
+	(*list)->next = new->next;
+	new->next = (*list);
+	(*list) = new;
 }
 
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	t_stack	*frame;
-	char	*str;
-	int		num;
+	t_list *a;
+	t_list *b;
+	char *str;
+	int i;
 
 	if (argc < 2)
 		return (1);
-	create_frame(frame, argv);
-	str = frame->array[1];
-	num = ft_atoi(str);
-	ft_printf("%d", num);
+	i = 1;
+	a = NULL;
+	b = NULL;
+	while (i < argc)
+	{
+		ft_lstadd_back(&a, ft_lstnew((void *)(long)ft_atoi(argv[i])));
+		i++;
+	}
+	swap(&a);
+	while (a)
+	{
+		ft_printf("%d\n", a->content);
+		a = a->next;
+	} 
 }
