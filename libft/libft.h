@@ -6,7 +6,7 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 15:28:39 by joteixei          #+#    #+#             */
-/*   Updated: 2022/02/20 19:39:41 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/09 16:01:21 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <stdio.h>
 # include <unistd.h>
 # include "ft_printf/ft_printf.h"
 

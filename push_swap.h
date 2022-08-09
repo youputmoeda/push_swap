@@ -6,7 +6,7 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 18:29:41 by joteixei          #+#    #+#             */
-/*   Updated: 2022/07/27 21:43:00 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/09 19:14:04 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,22 @@
 
 # include "libft/libft.h"
 
-typedef struct s_stack
-{
-	int			head;
-	char		**array;
-	size_t		size;
-}		t_stack;
+/*
+** swap.c
+*/
+void	swap(t_list **list, int print_s);
+void	ss(t_list **sa, t_list **sb);
 
+/*
+** push.c
+*/
+void	push(t_list **rece, t_list **donor, int print_p);
+
+/**
+** rotate.c
+*/
+void	rotate(t_list **list, int print_r);
+void	rr(t_list **a, t_list **b);
+void 	r_rotate(t_list **list, int print_rr);
+void	rrr(t_list **a, t_list **b);
 #endif
