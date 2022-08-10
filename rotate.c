@@ -6,7 +6,7 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:49:30 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/09 19:13:21 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/10 18:46:53 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	rotate(t_list **list, int print_r)
 {
-	t_list *tmp;
-	t_list *ptr;
+	t_list	*tmp;
+	t_list	*ptr;
 
 	ptr = (*list);
 	(*list) = (*list)->next;
@@ -39,7 +39,7 @@ void	rr(t_list **a, t_list **b)
 
 void	r_rotate(t_list **list, int print_rr)
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	tmp = (*list);
 	while (tmp->next->next != NULL)

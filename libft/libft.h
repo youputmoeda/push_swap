@@ -6,12 +6,14 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 15:28:39 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/09 16:01:21 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/10 18:33:33 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define LONG_MAX +2147483647
+# define LONG_MIN -2147483648
 
 # include <stdlib.h>
 # include <stdio.h>

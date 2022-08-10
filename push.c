@@ -6,7 +6,7 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 16:48:42 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/09 16:49:11 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/10 18:46:33 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	push(t_list **rece, t_list **donor, int print_p)
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	if (!rece || !(*donor) || !donor)
-		return;
+		return ;
 	tmp = (*donor);
 	(*donor) = (*donor)->next;
 	tmp->next = NULL;

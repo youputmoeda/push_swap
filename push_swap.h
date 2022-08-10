@@ -6,7 +6,7 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 18:29:41 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/09 19:14:04 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/10 18:46:01 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ void	push(t_list **rece, t_list **donor, int print_p);
 */
 void	rotate(t_list **list, int print_r);
 void	rr(t_list **a, t_list **b);
-void 	r_rotate(t_list **list, int print_rr);
+void	r_rotate(t_list **list, int print_rr);
 void	rrr(t_list **a, t_list **b);
 #endif
