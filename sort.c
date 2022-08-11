@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/09 16:48:42 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/11 15:46:26 by joteixei         ###   ########.fr       */
+/*   Created: 2022/08/11 15:28:59 by joteixei          #+#    #+#             */
+/*   Updated: 2022/08/11 16:13:31 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push(t_list **rece, t_list **donor, int print_p)
+void	sort_3(t_list **list)
 {
 	t_list	*tmp;
 
-	if (!rece || !(*donor) || !donor)
+	if (!((*list)->next) || !(*list) || !list)
 		return ;
-	tmp = (*donor);
-	(*donor) = (*donor)->next;
-	tmp->next = NULL;
-	tmp->next = (*rece);
-	(*rece) = tmp;
-	if (print_p == 1)
-		write(STDOUT_FILENO, "pa\n", 3);
-	else if (print_p == 2)
-		write(STDOUT_FILENO, "pb\n", 3);
+	tmp = (*list);
+	while (tmp->next != NULL)
+	{
+		if (tmp->content > tmp->next->content)
+			swap(&tmp, 1);
+		tmp = tmp->next;
+	}
+	printf("%ld\n", (long)tmp->content);
 }

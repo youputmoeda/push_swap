@@ -1,247 +1,176 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
 
-# GNU Make 4.3
-# Built for x86_64-unknown-linux-gnu
-# Copyright (C) 1988-2020 Free Software Foundation, Inc.
-# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-# This is free software: you are free to change and redistribute it.
-# There is NO WARRANTY, to the extent permitted by law.
+# This program built for i386-apple-darwin11.3.0
+ 
 
-# Make data base, printed on Wed Aug 10 15:03:06 2022
+# Make data base, printed on Thu Aug 11 14:54:32 2022
 
 # Variables
 
-# environment
-GDK_BACKEND = x11
-# environment
-LC_ALL = C
-# environment
-GJS_DEBUG_OUTPUT = stderr
-# environment
-GNOME_KEYRING_CONTROL = /nfs/homes/joteixei/.cache/keyring-QADRQ1
-# environment
-SBX_CHROME_API_RQ = 1
-# environment
-VSCODE_CWD = /nfs/homes/joteixei
-# environment
-LIBVIRT_DEFAULT_URI = qemu:///system
-# environment
-GDM_LANG = en
-# default
-MAKE_COMMAND := make
-# environment
-QT_ACCESSIBILITY = 1
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# makefile (from `Makefile', line 7)
+ 
+SRC := errors.c push.c push_swap.c rotate.c swap.c
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/joaomagalhaes/Desktop/42/push_swap
+# makefile
+SHELL = /bin/sh
+# makefile (from `Makefile', line 15)
+RM = rm -f
 # environment
-VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+VSCODE_NLS_CONFIG = {"locale":"pt-pt","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# makefile (from `Makefile', line 16)
+CFLAGS = -Wall -Wextra -Werror -I.
+# makefile (from `Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# environment
+__CFBundleIdentifier = com.microsoft.VSCode
+# environment
+INFOPATH = /opt/homebrew/share/info:
+# environment
+VSCODE_CWD = /
+# environment
+PATH = /opt/homebrew/opt/php@8.0/sbin:/opt/homebrew/opt/php@8.0/bin:/opt/homebrew/opt/php@5.6/sbin:/opt/homebrew/opt/php@5.6/sbin:/opt/homebrew/opt/php@5.6/bin:/opt/homebrew/opt/php@5.6/sbin:/opt/homebrew/opt/php@5.6/bin:/opt/homebrew/opt/php@8.0/sbin:/opt/homebrew/opt/php@8.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# makefile (from `Makefile', line 4)
+LIB = libft/libft.a
 # default
-.VARIABLES := 
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-PWD = /nfs/homes/joteixei/Desktop/42/push_swap
-# environment
-ZYPAK_ZYGOTE_STRATEGY_SPAWN = 1
-# automatic
-%D = $(patsubst %/,%,$(dir $%))
-# environment
-GI_TYPELIB_PATH = /app/lib/girepository-1.0
-# environment
-XDG_DATA_DIRS = /app/share:/usr/share:/usr/share/runtime/share:/run/host/user-share:/run/host/share
-# automatic
-^D = $(patsubst %/,%,$(dir $^))
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.luSFq4FsaM/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /nfs/homes/joteixei/.var/app/com.visualstudio.code/config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
+PWD = /Users/joaomagalhaes/Desktop/42/push_swap
+# makefile (from `Makefile', line 24)
+BOLD_YELLOW = \033[1;33m
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session21
+HOMEBREW_CELLAR = /opt/homebrew/Cellar
 # environment
-LANG = C
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
-XAUTHORITY = /run/flatpak/Xauthority
-# default
-.LOADED := 
-# default
-.INCLUDE_DIRS = /usr/include /usr/include
-# environment
-ALSA_CONFIG_DIR = /usr/share/alsa
-# makefile
-MAKEFLAGS = pqrR
-# environment
-ZYPAK_SPAWN_LATEST_ON_REEXEC = 0
-# makefile
-CURDIR := /nfs/homes/joteixei/Desktop/42/push_swap
-# environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
-# automatic
-*D = $(patsubst %/,%,$(dir $*))
-# environment
-ZYPAK_LIB = /app/bin/../lib
-# environment
-MFLAGS = -pqrR
-# environment
-SSH_AUTH_SOCK = /run/flatpak/ssh-auth
-# default
-.SHELLFLAGS := -c
-# environment
-XDG_CONFIG_DIRS = /app/etc/xdg:/etc/xdg
-# automatic
-+D = $(patsubst %/,%,$(dir $+))
-# environment
-ALSA_CONFIG_PATH = /usr/share/alsa/alsa-flatpak.conf
-# environment
-XDG_SESSION_DESKTOP = ubuntu
-# makefile
-MAKEFILE_LIST := 
-# environment
-FLATPAK_SANDBOX_DIR = /nfs/homes/joteixei/.var/app/com.visualstudio.code/sandbox
-# automatic
-@F = $(notdir $@)
-# environment
-VSCODE_PID = 23
-# environment
-KRB5CCNAME = FILE:/tmp/krb5cc_10361_ll6k1L
-# environment
-XDG_SESSION_TYPE = x11
-# automatic
-?D = $(patsubst %/,%,$(dir $?))
-# environment
-AT_SPI_BUS_ADDRESS = unix:path=/run/flatpak/at-spi-bus
-# environment
-XDG_DATA_HOME = /nfs/homes/joteixei/.var/app/com.visualstudio.code/data
-# environment
-SANDBOX_LD_PRELOAD = /app/bin/../lib/libzypak-preload-host.so:/app/bin/../lib/libzypak-preload-host-spawn-strategy.so
-# environment
-SESSION_MANAGER = local/c2r9s6.42lisboa.com:@/tmp/.ICE-unix/536173,unix/c2r9s6.42lisboa.com:/tmp/.ICE-unix/536173
-# automatic
-*F = $(notdir $*)
-# environment
-CHROME_DESKTOP = code-url-handler.desktop
-# environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/flatpak/bus
-# automatic
-<D = $(patsubst %/,%,$(dir $<))
-# environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
-# environment
-__EGL_EXTERNAL_PLATFORM_CONFIG_DIRS = /etc/egl/egl_external_platform.d:/usr/lib/x86_64-linux-gnu/GL/egl/egl_external_platform.d:/usr/share/egl/egl_external_platform.d
-# default
-MAKE_HOST := x86_64-unknown-linux-gnu
-# environment
-GNOME_DESKTOP_SESSION_ID = this-is-deprecated
-# makefile
-SHELL = /bin/sh
-# default
-MAKECMDGOALS := all
-# environment
-XMODIFIERS = @im=ibus
-# environment
-LD_LIBRARY_PATH = /app/lib
-# environment
-GJS_DEBUG_TOPICS = JS ERROR;JS LOG
-# environment
-SANDBOX_LD_LIBRARY_PATH = /app/lib
-# environment
-SHLVL = 0
-# environment
-MAKELEVEL := 0
-# default
-MAKE = $(MAKE_COMMAND)
-# environment
-PATH = /app/bin:/app/bin:/app/bin:/usr/bin:/nfs/homes/joteixei/.var/app/com.visualstudio.code/data/node_modules/bin
-# default
-MAKEFILES := 
-# environment
-LANGUAGE = en
-# automatic
-^F = $(notdir $^)
-# environment
-DBUS_SYSTEM_BUS_ADDRESS = unix:path=/run/dbus/system_bus_socket
-# environment
-XDG_CONFIG_HOME = /nfs/homes/joteixei/.var/app/com.visualstudio.code/config
-# environment
-DOCKER_HOST = unix:///run/user/10361/docker.sock
-# automatic
-?F = $(notdir $?)
-# environment
-XDG_CURRENT_DESKTOP = Unity
-# automatic
-+F = $(notdir $+)
-# environment
-XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
-# environment
-DESKTOP_SESSION = ubuntu
-# environment
-GST_PLUGIN_SYSTEM_PATH = /app/lib/gstreamer-1.0:/usr/lib/extensions/gstreamer-1.0:/usr/lib/x86_64-linux-gnu/gstreamer-1.0
-# environment
-ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
-# 'override' directive
-GNUMAKEFLAGS := 
-# environment
-LOGNAME = joteixei
-# environment
-container = flatpak
-# environment
-GIO_LAUNCHED_DESKTOP_FILE = /var/lib/flatpak/exports/share/applications/com.visualstudio.code.desktop
-# makefile
-.DEFAULT_GOAL := 
-# environment
-NPM_CONFIG_GLOBALCONFIG = /app/etc/npmrc
-# environment
-GTK_MODULES = gail:atk-bridge
-# environment
-USER = joteixei
-# environment
-DISPLAY = :99.0
-# default
-MAKE_VERSION := 4.3
-# environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 536766
-# environment
-SSH_AGENT_PID = 536269
-# environment
-_ = /usr/bin/make
-# environment
-XDG_RUNTIME_DIR = /run/user/10361
-# environment
-GPG_AGENT_INFO = /run/user/10361/gnupg/S.gpg-agent:0:1
+MANPATH = /opt/homebrew/share/man::
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-HOME = /nfs/homes/joteixei
-# environment
-QT_IM_MODULE = ibus
-# environment
-ELECTRON_RUN_AS_NODE = 1
-# environment
-VSCODE_IPC_HOOK = /run/user/10361/vscode-2ae94cc9-1.69.2-main.sock
+HOME = /Users/joaomagalhaes
 # default
-.RECIPEPREFIX := 
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/joaomagalhaes/Library/Application Support/Code/CachedData/6d9b74a70ca9c7733b29f0456fd8195364076dda
+# environment
+LOGNAME = joaomagalhaes
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XPC_FLAGS = 0x0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 1
+# makefile (from `Makefile', line 3)
+LIBFT = cd libft && make
+# makefile (from `Makefile', line 14)
+CC = gcc
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = joaomagalhaes
+# makefile
+.DEFAULT_GOAL := all
+# makefile (from `Makefile', line 11)
+NAME = push_swap
+# makefile (from `Makefile', line 20)
+BOLD_PURPLE = \033[1;35m
+# makefile (from `Makefile', line 32)
+FCLEANED = echo "\n🧼 $(BOLD_YELLOW)Fclean: $(NO_COLOR)Removed the executables \n"
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
+# makefile (from `Makefile', line 22)
+BOLD_CYAN = \033[1;36m
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/vf/wv0wgmzn5v7gspzhjt65qmd40000gn/T/
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /Users/joaomagalhaes/Library/Application Support/Code/1.70.1-main.sock
+# environment
+MallocNanoZone = 0
+# makefile (from `Makefile', line 34)
+EXEC_READY = echo "\n📟 Executable ready!\n"
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.16489862.16489868
+# environment
+HOMEBREW_PREFIX = /opt/homebrew
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# environment
+HOMEBREW_REPOSITORY = /opt/homebrew
+# makefile (from `Makefile', line 8)
+C_EXECUTABLE := errors push push_swap rotate swap
+# environment
+__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0xA
+# environment
+COMMAND_MODE = unix2003
+# default
+MAKEFILES := 
 # automatic
 <F = $(notdir $<)
+# environment
+LC_ALL = C
+# automatic
+^F = $(notdir $^)
+# makefile (from `Makefile', line 30)
+COMP_START = echo "\n🚧 $(BOLD_YELLOW)Make: $(NO_COLOR)Starting the compilation...\n"
 # default
 SUFFIXES := 
-# environment
-XDG_CACHE_HOME = /nfs/homes/joteixei/.var/app/com.visualstudio.code/cache
-# environment
-VSCODE_CLI = 1
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
-# environment
-XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/joteixei
 # default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+.INCLUDE_DIRS = /usr/local/include
 # environment
-FLATPAK_ID = com.visualstudio.code
+MAKELEVEL := 0
 # environment
-XDG_MENU_PREFIX = gnome-
+LANG = C
 # environment
-ZYPAK_BIN = /app/bin
-# environment
-GDMSESSION = ubuntu
+VSCODE_PID = 64678
+# makefile (from `Makefile', line 26)
+NO_COLOR = \033[0m
 # variable set hash-table stats:
-# Load=114/1024=11%, Rehash=0, Collisions=14/139=10%
+# Load=78/1024=8%, Rehash=0, Collisions=3/111=3%
 
 # Pattern-specific Variable Values
 
@@ -249,22 +178,110 @@ GDMSESSION = ubuntu
 
 # Directories
 
-# . (device 64768, inode 2100189): 12 files, no impossibilities.
+# . (device 16777230, inode 16458252): 14 files, no impossibilities.
 
-# 12 files, no impossibilities in 1 directories.
+# 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
-# No implicit rules.
+%.o: %.c
+#  commands to execute (from `Makefile', line 45):
+	$(CC) $(CFLAGS) -c $< -o $@
+	
+
+# 1 implicit rules, 0 (0.0%) terminal.
 
 # Files
 
-# Not a target:
-Makefile:
-#  Implicit rule search has been done.
+all: comp_start push_swap
+#  Phony target (prerequisite of .PHONY).
+#  Command-line target.
+#  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
-#  Failed to be updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+
+.PHONY: all fclean clean re
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+comp_start:
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: `'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := comp_start
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/13=8%
+#  commands to execute (from `Makefile', line 41):
+	@$(COMP_START)
+	make -C libft
+	
+
+# Not a target:
+push.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+rotate.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+errors.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ 
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-11 14:54:12
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+fclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 56):
+	$(RM)	$(LIB)
+ 
+	$(RM)	$(NAME)
+	@$(FCLEANED)
+	
 
 # Not a target:
 .DEFAULT:
@@ -272,42 +289,56 @@ Makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-all:
-#  Command line target.
-#  Implicit rule search has been done.
+re: fclean all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 
-# Not a target:
-makefile:
-#  Implicit rule search has been done.
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
 #  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 52):
+	$(RM)	$(C_EXECUTABLE:=.o)
+	@make clean -C ./libft
+	
 
 # Not a target:
-GNUmakefile:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
+push_swap.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+push_swap: errors.o push.o push_swap.o rotate.o swap.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 48):
+	$(CC) $(CFLAGS) $(C_EXECUTABLE:=.o) libft/libft.a -o $(NAME)
+	@$(EXEC_READY)
+	
+
+# Not a target:
+swap.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
+# Load=15/1024=1%, Rehash=0, Collisions=2/43=5%
 # VPATH Search Paths
 
-# No 'vpath' search paths.
+# No `vpath' search paths.
 
-# No general ('VPATH' variable) search path.
+# No general (`VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 19 / storage = 153 B / avg = 8 B
-# current buf: size = 8162 B / used = 153 B / count = 19 / avg = 8 B
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# strcache performance: lookups = 22 / hit rate = 13%
-# hash-table stats:
- 
-# Load=19/8192=0%, Rehash=0, Collisions=0/22=0%
-# Finished Make data base on Wed Aug 10 15:03:06 2022
+# Finished Make data base on Thu Aug 11 14:54:32 2022
 
  

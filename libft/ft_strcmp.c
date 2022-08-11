@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/09 16:48:42 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/11 15:46:26 by joteixei         ###   ########.fr       */
+/*   Created: 2022/08/11 04:57:52 by joteixei          #+#    #+#             */
+/*   Updated: 2022/08/11 05:11:15 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-void	push(t_list **rece, t_list **donor, int print_p)
+int	ft_strcmp(char *s1, char *s2)
 {
-	t_list	*tmp;
+	int	i;
 
-	if (!rece || !(*donor) || !donor)
-		return ;
-	tmp = (*donor);
-	(*donor) = (*donor)->next;
-	tmp->next = NULL;
-	tmp->next = (*rece);
-	(*rece) = tmp;
-	if (print_p == 1)
-		write(STDOUT_FILENO, "pa\n", 3);
-	else if (print_p == 2)
-		write(STDOUT_FILENO, "pb\n", 3);
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+		i++;
+	return (s1[i] - s2[i]);
 }
