@@ -6,7 +6,7 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 18:29:09 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/11 15:47:33 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/12 18:32:35 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(int argc, char **argv)
 		i++;
 	}
 	printf("ATENÇÃO:\n");
-	sort_3(&a);
+	sort_5(&a, &b);
 	printf("THIS IS A:\n");
 	while (a)
 	{

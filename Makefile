@@ -13,8 +13,8 @@ NAME = push_swap
 ###### RULES ######
 CC = gcc
 RM = rm -f
-CFLAGS = -Wall -Wextra -Werror -I.
-
+CFLAGS = -Wall -Wextra -g -I.
+#-Werror
 # ------------------------------ Colors ------------------------------
 
 BOLD_PURPLE	=	\033[1;35m

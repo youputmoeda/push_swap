@@ -6,7 +6,7 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 18:29:41 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/11 15:31:01 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/12 19:08:49 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,12 @@ long long	ft_atoi_p(const char *str);
 /*
 ** errors.c
 */
-
 void		sort_3(t_list **list);
+void		sort_5(t_list **a, t_list **b);
+
+/*
+** errors.c
+*/
+int			ft_smallest(t_list *list);
 
 #endif
