@@ -6,7 +6,7 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 18:29:41 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/12 19:08:49 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/19 23:53:59 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,24 @@ int			check(int len, char **syntax);
 long long	ft_atoi_p(const char *str);
 
 /*
-** errors.c
+** sort.c
 */
+void		sort_2(t_list **list);
 void		sort_3(t_list **list);
 void		sort_5(t_list **a, t_list **b);
+void		sort_all(t_list **a, t_list **b);
 
 /*
-** errors.c
+** utils.c
 */
+int			is_sort(t_list **list);
 int			ft_smallest(t_list *list);
+void		ft_org_push(t_list **a, t_list **b, int pos);
+
+/*
+** utils2.c
+*/
+void		empty_list(t_list **a, t_list **b);
+void		organize_index(t_list **a, t_list **b, int size);
 
 #endif

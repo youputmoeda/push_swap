@@ -6,7 +6,7 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 15:28:39 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/11 04:58:46 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/20 22:21:53 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}	t_list;
+}					t_list;
 
 /*
 ** PART I - LIBC FUNCTIONS

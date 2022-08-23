@@ -6,7 +6,7 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 05:18:18 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/12 17:06:52 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/17 03:57:54 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	check(int len, char **syntax)
 		{
 			if (!ft_isdigit(syntax[i][1]))
 				return (0);
-			j = 1;		
+			j = 1;
 		}
 		while (syntax[i][j] != '\0')
 		{

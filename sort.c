@@ -6,11 +6,16 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 15:28:59 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/12 19:13:56 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/20 22:37:59 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	sort_2(t_list **list)
+{
+	swap(list, 1);
+}
 
 void	sort_3(t_list **list)
 {
@@ -41,23 +46,33 @@ void	sort_3(t_list **list)
 
 void	sort_5(t_list **a, t_list **b)
 {
-	t_list *tmp;
+	t_list	*tmp;
 	int		pos;
 
 	tmp = (*a);
-	pos = ft_smallest(tmp);
-	printf("%d\n", pos);
-	if (pos > 2)
+	if (ft_lstsize(tmp) == 5)
 	{
-		if (ft_lstsize(tmp) == 5)
-			pos = 5 - pos;
-		else
-			pos = 4 - pos;
-		while (pos)
-		{
-			r_rotate(a, 1);
-			pos--;
-		}			
+		pos = ft_smallest(tmp);
+		ft_org_push(a, b, pos);
 	}
-	push(b, a, 2);
+	tmp = (*a);
+	pos = ft_smallest(tmp);
+	ft_org_push(a, b, pos);
+}
+
+void	sort_all(t_list **a, t_list **b)
+{
+	t_list	*tmp;
+	int		size;
+
+	implement_order(a);
+	tmp = (*a);
+	size = ft_lstsize(tmp);
+	printf("THIS IS A1:\n");
+	while (tmp)
+	{
+		ft_printf("%d\n", tmp->content);
+		tmp = tmp->next;
+	}
+	organize_index(a, b, size);
 }
