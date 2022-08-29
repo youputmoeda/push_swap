@@ -6,7 +6,7 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 15:28:59 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/20 22:37:59 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/29 17:14:30 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,14 +65,13 @@ void	sort_all(t_list **a, t_list **b)
 	t_list	*tmp;
 	int		size;
 
-	implement_order(a);
 	tmp = (*a);
 	size = ft_lstsize(tmp);
-	printf("THIS IS A1:\n");
 	while (tmp)
 	{
-		ft_printf("%d\n", tmp->content);
+		tmp->content = convert_b((long)tmp->content);
 		tmp = tmp->next;
 	}
+	return;
 	organize_index(a, b, size);
 }

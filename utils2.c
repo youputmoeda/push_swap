@@ -6,25 +6,44 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 22:45:17 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/20 22:46:50 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/29 17:13:53 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	implement_order(t_list **list)
+long long convert_b(int n)
 {
-	t_list	*sort_list;
-	t_list	*index;
-	t_list	*helper;
+	long long	bin;
+	int			rem;
+	int			i;
+
+	bin = 0;
+	rem = 1;
+	i = 1;
+	while (n != 0)
+	{
+		rem = n % 2;
+		n /= 2;
+		bin += rem * i;
+		i *= 10;
+	}
+	return (bin);
+}
+
+void implement_order(t_list **list)
+{
+	t_list *sort_list;
+	t_list *index;
+	t_list *helper;
 
 	sort_list = (*list);
 	index = NULL;
 	helper = NULL;
-	while (sort_list->content)
+	while (sort_list)
 	{
 		index = sort_list->next;
-		while (index->content)
+		while (index)
 		{
 			if (sort_list->content > index->content)
 			{
@@ -38,10 +57,10 @@ void	implement_order(t_list **list)
 	}
 }
 
-void	empty_list(t_list **a, t_list **b)
+void empty_list(t_list * *a, t_list * *b)
 {
-	t_list	*tmp;
-	int		size;
+	t_list *tmp;
+	int size;
 
 	tmp = (*b);
 	size = ft_lstsize(tmp);
@@ -52,12 +71,12 @@ void	empty_list(t_list **a, t_list **b)
 	}
 }
 
-void	organize_index(t_list **a, t_list **b, int size)
+void organize_index(t_list **a, t_list **b, int size)
 {
-	int		max_num;
-	int		max_bits;
-	int		i;
-	int		j;
+	int max_num;
+	int max_bits;
+	int i;
+	int j;
 
 	max_num = size - 1;
 	max_bits = 0;
