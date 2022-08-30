@@ -6,7 +6,7 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 15:28:59 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/29 17:14:30 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/29 22:22:19 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,11 +67,11 @@ void	sort_all(t_list **a, t_list **b)
 
 	tmp = (*a);
 	size = ft_lstsize(tmp);
+	convert_b(tmp);
 	while (tmp)
 	{
-		tmp->content = convert_b((long)tmp->content);
 		tmp = tmp->next;
 	}
-	return;
+	implement_order(a);
 	organize_index(a, b, size);
 }

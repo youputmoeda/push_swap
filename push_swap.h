@@ -6,7 +6,7 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 18:29:41 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/29 16:26:26 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/29 22:18:58 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,13 @@ void		sort_all(t_list **a, t_list **b);
 int			is_sort(t_list **list);
 int			ft_smallest(t_list *list);
 void		ft_org_push(t_list **a, t_list **b, int pos);
-long long	convert_b(int n);
+void	convert_b(t_list *n);
 
 /*
 ** utils2.c
 */
 void		empty_list(t_list **a, t_list **b);
 void		organize_index(t_list **a, t_list **b, int size);
+void		implement_order(t_list **list);
 
 #endif
