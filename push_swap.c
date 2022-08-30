@@ -6,13 +6,13 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 18:29:09 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/29 17:04:33 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/30 18:52:07 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	resolve(t_list **a, t_list **b)
+void resolve(t_list **a, t_list **b)
 {
 	if (ft_lstsize((*a)) == 2)
 		sort_2(a);
@@ -29,14 +29,15 @@ void	resolve(t_list **a, t_list **b)
 		sort_all(a, b);
 }
 
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	t_list	*a;
-	t_list	*b;
-	int		i;
-	t_list	*tmp;
+	t_list *a;
+	t_list *b;
+	int i;
 
-	if (argc < 2 || !check(argc, argv))
+	if (argc < 2)
+		return (1);
+	if (!check(argc, argv))
 	{
 		printf("Error\n");
 		return (1);
@@ -49,20 +50,7 @@ int	main(int argc, char **argv)
 		ft_lstadd_back(&a, ft_lstnew((void *)(long)ft_atoi(argv[i])));
 		i++;
 	}
-	i = 0;
-	tmp = a;
 	if (!is_sort(&a))
 		resolve(&a, &b);
-	printf("THIS IS A:\n");
-	while (a)
-	{
-		ft_printf("%d\n", a->content);
-		a = a->next;
-	}
-	printf("THIS IS B:\n");
-	while (b)
-	{
-		ft_printf("%d\n", b->content);
-		b = b->next;
-	}
+	ft_lstclear(&a, NULL);
 }

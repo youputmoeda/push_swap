@@ -6,70 +6,58 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 22:45:17 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/29 22:28:59 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/30 18:32:13 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	convert_b(t_list *list)
+long long convert_b(int n)
 {
-	long long	bin;
-	int			rem;
-	int			i;
-	long long	helper;
-	t_list		*tmp;
+	long long bin;
+	int rem;
+	int i;
 
-	tmp = list;
+	bin = 0;
+	rem = 1;
+	i = 1;
+	while (n != 0)
+	{
+		rem = n % 2;
+		n /= 2;
+		bin += rem * i;
+		i *= 10;
+	}
+	return (bin);
+}
+
+void implement_order(t_list **list, int size, int before, int pos)
+{
+	t_list *tmp;
+	t_list *min;
+	int min_n;
+
+	min_n = LONG_MAX;
+	tmp = (*list);
 	while (tmp)
 	{
-		bin = 0;
-		rem = 1;
-		i = 1;
-		helper = (long)tmp->content;
-		while (helper != 0)
+		if (min_n >= (long)tmp->content && ((long)tmp->content > before 
+			|| (before == LONG_MIN && tmp->content == LONG_MIN && pos == 0)))
 		{
-			rem = helper % 2;
-			helper /= 2;
-			bin += rem * i;
-			i *= 10;
+			min = tmp;
+			min_n = (long)tmp->content;
 		}
-		helper = bin;
-		printf("TESTEEEEE: %lld\n", helper);
 		tmp = tmp->next;
 	}
+	if (pos != size - 1)
+		implement_order(list, size, min_n, pos + 1);
+	min->content = pos;
 }
 
-void	implement_order(t_list **list)
+void empty_list(t_list **a, t_list **b)
 {
-	t_list	*sort_list;
-	t_list	*index;
-	t_list	*helper;
-
-	sort_list = (*list);
-	index = NULL;
-	helper = NULL;
-	while (sort_list)
-	{
-		index = sort_list->next;
-		while (index)
-		{
-			if (sort_list->content > index->content)
-			{
-				helper = sort_list;
-				sort_list->content = index->content;
-				index = helper;
-			}
-			index = index->next;
-		}
-		sort_list = sort_list->next;
-	}
-}
-
-void	empty_list(t_list **a, t_list **b)
-{
-	t_list	*tmp;
-	int		size;
+	t_list *tmp;
+	int size;
 
 	tmp = (*b);
 	size = ft_lstsize(tmp);
@@ -80,12 +68,12 @@ void	empty_list(t_list **a, t_list **b)
 	}
 }
 
-void	organize_index(t_list **a, t_list **b, int size)
+void organize_index(t_list **a, t_list **b, int size)
 {
-	int	max_num;
-	int	max_bits;
-	int	i;
-	int	j;
+	int max_num;
+	int max_bits;
+	int i;
+	int j;
 
 	max_num = size - 1;
 	max_bits = 0;

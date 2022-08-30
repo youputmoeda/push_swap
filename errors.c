@@ -6,7 +6,7 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 05:18:18 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/17 03:57:54 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/30 18:50:36 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,9 @@ long long	ft_atoi_p(const char *str)
 	{
 		if (*str == '-')
 			sign *= -1;
+		str++;
 	}
-	while (*str > 47 && *str < 58)
+	while (*str >= '0' && *str <= '9')
 	{
 		num *= 10;
 		num += (sign * (*(str++) - 48));
@@ -77,6 +78,8 @@ int	check(int len, char **syntax)
 				return (0);
 			j++;
 		}
+		if (j > 11)
+			return (0);
 		num = ft_atoi_p(syntax[i]);
 		if (!(num >= LONG_MIN && num <= LONG_MAX))
 			return (0);
