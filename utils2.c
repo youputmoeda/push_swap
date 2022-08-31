@@ -6,30 +6,11 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 22:45:17 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/30 18:32:13 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/31 14:51:15 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-long long convert_b(int n)
-{
-	long long bin;
-	int rem;
-	int i;
-
-	bin = 0;
-	rem = 1;
-	i = 1;
-	while (n != 0)
-	{
-		rem = n % 2;
-		n /= 2;
-		bin += rem * i;
-		i *= 10;
-	}
-	return (bin);
-}
 
 void implement_order(t_list **list, int size, int before, int pos)
 {
@@ -41,8 +22,8 @@ void implement_order(t_list **list, int size, int before, int pos)
 	tmp = (*list);
 	while (tmp)
 	{
-		if (min_n >= (long)tmp->content && ((long)tmp->content > before 
-			|| (before == LONG_MIN && tmp->content == LONG_MIN && pos == 0)))
+		if (min_n >= (long)tmp->content && ((long)tmp->content > before
+			|| (before == LONG_MIN && (long)tmp->content == LONG_MIN && pos == 0)))
 		{
 			min = tmp;
 			min_n = (long)tmp->content;
@@ -51,7 +32,7 @@ void implement_order(t_list **list, int size, int before, int pos)
 	}
 	if (pos != size - 1)
 		implement_order(list, size, min_n, pos + 1);
-	min->content = pos;
+	min->content = (void *)(long)pos;
 }
 
 void empty_list(t_list **a, t_list **b)

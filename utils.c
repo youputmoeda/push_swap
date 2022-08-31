@@ -6,7 +6,7 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 18:41:50 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/17 18:22:27 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/08/31 14:18:12 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	is_sort(t_list **list)
 	count = 0;
 	while (tmp->next != NULL)
 	{
-		if (tmp->content > tmp->next->content)
+		if ((long)tmp->content > (long)tmp->next->content)
 			count++;
 		tmp = tmp->next;
 	}
@@ -42,7 +42,7 @@ int	ft_smallest(t_list *list)
 	smaller = list;
 	while (tmp)
 	{
-		if (tmp->content < smaller->content)
+		if ((long)tmp->content < (long)smaller->content)
 			smaller = tmp;
 		tmp = tmp->next;
 	}
