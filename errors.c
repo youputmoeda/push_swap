@@ -6,7 +6,7 @@
 /*   By: joteixei <joteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 05:18:18 by joteixei          #+#    #+#             */
-/*   Updated: 2022/08/30 18:50:36 by joteixei         ###   ########.fr       */
+/*   Updated: 2022/09/01 17:24:57 by joteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,32 @@ long long	ft_atoi_p(const char *str)
 	return (num);
 }
 
+int	helper(int i, int j, char **syntax)
+{
+	int	is_valid;
+	int	len;
+
+	len = 0;
+	is_valid = 0;
+	if (syntax[i][0] == '-')
+	{
+		if (!ft_isdigit(syntax[i][1]))
+			return (0);
+		j = 1;
+	}
+	while (syntax[i][j] != '\0')
+	{
+		if (!is_valid && syntax[i][j] != '0')
+			len = is_valid++;
+		else
+			len++;
+		if (!ft_isdigit(syntax[i][j]))
+			return (0);
+		j++;
+	}
+	return (len < 11);
+}
+
 int	check(int len, char **syntax)
 {
 	int			i;
@@ -66,19 +92,9 @@ int	check(int len, char **syntax)
 	j = 0;
 	while (i < len)
 	{
-		if (syntax[i][0] == '-')
-		{
-			if (!ft_isdigit(syntax[i][1]))
-				return (0);
-			j = 1;
-		}
-		while (syntax[i][j] != '\0')
-		{
-			if (!ft_isdigit(syntax[i][j]))
-				return (0);
-			j++;
-		}
-		if (j > 11)
+		if (syntax[i][j] == '\0')
+			return (0);
+		if (!(helper(i, j, syntax)))
 			return (0);
 		num = ft_atoi_p(syntax[i]);
 		if (!(num >= LONG_MIN && num <= LONG_MAX))
@@ -86,7 +102,5 @@ int	check(int len, char **syntax)
 		i++;
 		j = 0;
 	}
-	if (!duplicates(syntax))
-		return (0);
 	return (1);
 }
